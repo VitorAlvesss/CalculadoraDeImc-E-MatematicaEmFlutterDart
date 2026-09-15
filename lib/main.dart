@@ -1,3 +1,4 @@
+import 'package:calculadoras/paginas/telaImc.dart';
 import 'package:calculadoras/paginas/tela_principal.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //define qual seria a primeira tela a ser exibida.
-      home: TelaPrincipal(),
+      home: telaCalculoImc(),
     );
   }
 }

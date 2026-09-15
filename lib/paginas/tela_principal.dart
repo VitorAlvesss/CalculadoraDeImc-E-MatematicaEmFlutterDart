@@ -33,6 +33,8 @@ class TelaPrincipal extends StatelessWidget {
                 color: Colors.lightGreen
               ),
 
+              const SizedBox(height: 16),
+
               const Text(
                 'Calculadora IMC',
                 style: TextStyle(
