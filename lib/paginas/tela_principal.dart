@@ -17,7 +17,11 @@ class TelaPrincipal extends StatelessWidget {
         //espaçamento em todas as áreas da aplicação
         padding: const EdgeInsets.all(24),
 
-        child: Column(
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+
+          
             crossAxisAlignment: CrossAxisAlignment.center,
 
             children: [
@@ -35,8 +39,28 @@ class TelaPrincipal extends StatelessWidget {
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
+
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Calcular IMC')
+              ), 
+
+
+              const Text(
+                'Calculadora matemática',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Calcular')
+              ),       
             ],
+          ),
         )
       )
     );
