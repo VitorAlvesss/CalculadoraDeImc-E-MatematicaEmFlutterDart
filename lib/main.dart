@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //define qual seria a primeira tela a ser exibida.
-      home: telaCalculadora(),
+      home: TelaPrincipal(),
     );
   }
 }

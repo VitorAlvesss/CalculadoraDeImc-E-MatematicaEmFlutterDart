@@ -1,3 +1,5 @@
+import 'package:calculadoras/paginas/telaCalculadora.dart';
+import 'package:calculadoras/paginas/telaImc.dart';
 import 'package:flutter/material.dart';
 
 class TelaPrincipal extends StatelessWidget {
@@ -8,7 +10,7 @@ class TelaPrincipal extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Calculadoras.'),
-        backgroundColor: const Color.fromARGB(255, 201, 16, 77),
+        backgroundColor: const Color.fromARGB(199, 42, 50, 116),
         foregroundColor: Colors.white,
       ),
 
@@ -28,9 +30,9 @@ class TelaPrincipal extends StatelessWidget {
 
 
               const Icon(
-                Icons.calculate,
+                Icons.scale,
                 size: 100,
-                color: Colors.lightGreen
+                color: Color.fromARGB(255, 8, 2, 83)
               ),
 
               const SizedBox(height: 16),
@@ -43,11 +45,31 @@ class TelaPrincipal extends StatelessWidget {
                 ),
               ),
 
+              const SizedBox(height: 10),
+
               ElevatedButton(
-                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => telaCalculoImc()),
+                  );
+                },
                 child: const Text('Calcular IMC')
               ), 
 
+              const SizedBox(height: 16),
+
+              const Icon(
+                Icons.calculate,
+                size: 100,
+                color: Color.fromARGB(255, 8, 2, 83)
+              ),
+
+              const SizedBox(height: 16),
 
               const Text(
                 'Calculadora matemática',
@@ -58,7 +80,16 @@ class TelaPrincipal extends StatelessWidget {
               ),
 
               ElevatedButton(
-                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => telaCalculadora()),
+                  );
+                },
                 child: const Text('Calcular')
               ),       
             ],
